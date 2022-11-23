@@ -21,5 +21,3 @@ class Calculator:
         if x == 0 or x == 1:
             return 1
         return self.fibonacci_of(x-1) + self.fibonacci_of(x-2)
-
-    
