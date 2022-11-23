@@ -33,3 +33,20 @@ class TestCalculator:
     def test_fibonacci(self,calculator):
         assert calculator.fibonacci_of(5) == 8
         assert calculator.fibonacci_of(7) == 21
+    
+    def test_invalid_matrix_multiplication(self, calculator):
+        A = [[1,2,3],
+             [4,5,6]]
+        B = [[3,2,1],
+             [6,5,4]]
+        with pytest.raises(Exception):
+            calculator.multiply_matrix(A, B)
+    
+    def test_invalid_matrix_multiplication(self, calculator):
+        A = [[3,4],
+             [2,1]]
+        B = [[1,5],
+             [3,7]]
+        result = [[15,43],
+                  [5,17]]
+        assert calculator.multiply_matrix(A,B) == result
